@@ -1,0 +1,7 @@
+Abstract
+The DS PDF App is a modular Python backend designed to perform various PDF manipulations in one integrated script. It supports three primary operations:
+
+Collaging: Combines two PDF pages into one output page by rotating, scaling, and positioning them side by side (or top/bottom) on a letter-sized canvas. This is particularly useful for printing multiple pages on a single sheet to save on paper and printing costs.
+Extraction: Allows the user to extract a specific range of pages from a PDF document and save them as a new PDF. This is ideal for isolating chapters or sections from larger documents.
+Merging: Concatenates multiple PDF files into a single PDF. The order of selection directly determines the output sequence, making it straightforward to merge documents chronologically.
+The code is built as an extendable class (DSPDF) that groups related operations into static methods, facilitating future enhancements and integration—such as transitioning to a Flask-based web application or cloud deployment. It leverages the PyPDF2 library for PDF manipulation and Tkinter for simple graphical file dialogs. Note that parameters like the horizontal and vertical adjustments (referred to as RX and RY factors) play a crucial role in aligning PDF content. Incorrect adjustments might result in output pages with content that falls outside the visual canvas.
